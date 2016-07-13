@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Newaplications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newaplications.each do |newaplication| %>
+      <tr>
+        <td><%= link_to 'Show', newaplication %></td>
+        <td><%= link_to 'Edit', edit_newaplication_path(newaplication) %></td>
+        <td><%= link_to 'Destroy', newaplication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newaplication', new_newaplication_path %>
